@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI PLANT CARE</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><h1>🌿 AI PLANT CARE</h1><p data-i18n="tagline"></p></header>
+<main>
+<section id="t-scan" class="tab on">
+ <div class="card">
+  <h2 data-i18n="scan_h"></h2>
+  <p class="mu" data-i18n="scan_p"></p>
+  <div class="drop" id="drop"></div>
+  <div class="row"><button class="btn sec" id="pick" type="button" data-i18n="choose"></button><button class="btn sec" id="snap" type="button" data-i18n="take"></button></div>
+  <input id="file" type="file" accept="image/*" class="off" tabindex="-1"><input id="cam" type="file" accept="image/*" capture="environment" class="off" tabindex="-1">
+  <select id="crop"></select>
+  <button class="btn" id="go" type="button" disabled data-i18n="go"></button>
+ </div>
+ <div id="out"></div>
+ <div class="card"><h2 data-i18n="recent"></h2><div id="hist" class="mu"></div></div>
+</section>
+<section id="t-lib" class="tab">
+ <div class="card"><h2 data-i18n="lib_h"></h2><input id="q" type="text" data-i18n-ph="lib_ph"><div id="libst" class="mu"></div><div id="lib"></div></div>
+</section>
+<section id="t-ask" class="tab">
+ <div class="card"><h2 data-i18n="ask_h"></h2>
+  <textarea id="qs" rows="3" data-i18n-ph="ask_ph"></textarea>
+  <button class="btn" id="ask" type="button" data-i18n="ask_btn"></button><div id="ans" class="msg"></div></div>
+</section>
+<section id="t-set" class="tab">
+ <div class="card"><h2 data-i18n="set_h"></h2>
+  <p class="mu" data-i18n="set_p"></p>
+  <label class="mu" for="lang" data-i18n="lang_l"></label>
+  <select id="lang"></select>
+  <label class="mu" for="key" data-i18n="key_l"></label>
+  <input id="key" type="password" placeholder="AIza…" autocomplete="off">
+  <button class="btn" id="save" type="button" data-i18n="save"></button><div id="saved" class="mu"></div></div>
+ <div class="card"><h2 data-i18n="tips_h"></h2><ul id="tips"></ul></div>
+ <p class="mu" data-i18n="disc"></p>
+</section>
+<section id="t-crops" class="tab"><div class="card"><h2 data-i18n="crops_h"></h2>
+ <div class="row"><select id="mc"></select><input id="md" type="date"></div>
+ <button class="btn" id="madd" type="button" data-i18n="add_crop"></button></div><div id="mylist"></div></section>
+<section id="t-wx" class="tab"><div class="card"><h2 data-i18n="wx_h"></h2><p class="mu" data-i18n="wx_p"></p><button class="btn" id="wgo" type="button" data-i18n="wx_btn"></button><div id="wout" class="msg"></div></div></section>
+<section id="t-com" class="tab"><div class="card"><h2 data-i18n="com_h"></h2><p class="mu" data-i18n="com_p"></p>
+ <input id="cq" type="text" data-i18n-ph="com_ph"><button class="btn" id="cpost" type="button" data-i18n="post"></button></div><div id="cfeed"></div></section>
+<section id="t-tool" class="tab"><div class="card"><h2 data-i18n="fert_h"></h2>
+ <div class="row"><select id="fc"></select><input id="fa" type="number" min="0" step="0.1" data-i18n-ph="area_ph"></div>
+ <button class="btn" id="fgo" type="button" data-i18n="calc"></button><div id="fout" class="msg"></div></div>
+ <div class="card"><h2 data-i18n="spray_h"></h2><div class="row"><input id="sd" type="number" min="0" step="0.1" data-i18n-ph="dose_ph"><input id="st" type="number" min="0" step="1" data-i18n-ph="tank_ph"></div>
+ <button class="btn" id="sgo" type="button" data-i18n="calc"></button><div id="sout" class="msg"></div></div></section>
+</main>
+<nav>
+ <button data-t="scan" class="on"><b>🔍</b><span data-i18n="n_scan"></span></button>
+ <button data-t="crops"><b>🌾</b><span data-i18n="n_crops"></span></button>
+ <button data-t="wx"><b>⛅</b><span data-i18n="n_wx"></span></button>
+ <button data-t="lib"><b>📚</b><span data-i18n="n_lib"></span></button>
+ <button data-t="com"><b>👥</b><span data-i18n="n_com"></span></button>
+ <button data-t="ask"><b>💬</b><span data-i18n="n_ask"></span></button>
+ <button data-t="tool"><b>🧮</b><span data-i18n="n_tool"></span></button>
+ <button data-t="set"><b>⚙️</b><span data-i18n="n_set"></span></button>
+</nav>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body></html>
